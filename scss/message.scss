@@ -1,0 +1,18 @@
+@mixin message($color){
+  position: fixed;
+  bottom: 100px;
+  width: 100vw;
+  height: 90px;
+  background-color: $color;
+  z-index: 99;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 5px 10px 22px #000;
+  display: none;
+}
+.message_error{
+  @include message(#f94141);
+}
+.message_send{
+  @include message(#a4ff9b);
+}

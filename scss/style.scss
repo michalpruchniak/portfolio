@@ -1,0 +1,285 @@
+@import 'media';
+@import 'form';
+@import 'message';
+@mixin centerBlock(){
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+@import url('https://fonts.googleapis.com/css?family=Domine');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+@import 'animate';
+$link: #8fddf1;
+body{
+  overflow-y: auto;
+}
+#background{
+  //position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  //z-index: 99999999;
+  //opacity: 0;
+  //text-align: center;
+  //padding-top: 45px;
+  //font-size: 25px;
+  display: none;
+  /*a{
+    color: #000;
+    font-weight: bold;
+    &:hover{
+      text-decoration: none;
+      color: #007a98;
+    }
+    &:focus{
+      text-decoration: none;
+    }
+  }*/
+/*p{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 50px;
+    display: none;
+
+  }*/
+  /*ul{
+    margin-top: 58px;
+    list-style-type: none;
+    li{
+      opacity: 0;
+      margin-bottom: 1px;
+
+    }
+  }*/
+}
+.header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 50px;
+    &:after{
+      display: inline-block;
+      margin: 0 0 8px 20px;
+      height: 3px;
+      content: " ";
+      text-shadow: none;
+      background-color: #999;
+    }
+    &:before{
+      display: inline-block;
+      margin: 0 20px 8px 0;
+      height: 3px;
+      content: " ";
+      text-shadow: none;
+      background-color: #999;
+    }
+}
+nav{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 8px 30px 8px 0;
+  z-index: 999;
+  text-align: right;
+  transition-duration:2s;
+  a{
+    font-size: 19px;
+    font-weight: bold;
+      color: $link;
+    &:hover{
+      color: #D4E157;
+      text-decoration: none;
+    }
+    &:focus{
+      color: #D4E157;
+      text-decoration: none;
+    }
+}
+  ul{
+    list-style-type: none;
+    padding: 0;
+    padding: 5px 0 0 15px;
+  }
+  li{
+    display: inline-block;
+    margin: 5px;
+    }
+}
+
+#first-slide{
+  background-image: url('../img/background.jpg');
+  background-position: center;
+  background-size: cover;
+  box-shadow: 3px 28px 30px #939393;
+  #me{
+  //@include centerBlock();
+  position: relative;
+    top:180px;
+    padding-top: 43px;
+    height: 120px;
+    margin: 0 auto;
+    text-align: right;
+    font-weight: bold;
+    span{
+        text-align: center;
+        font-family: 'Carter One', cursive;
+        color: $link;
+        text-shadow: 2px 2px #000;
+    }
+    p{
+      text-align: right;
+      font-family: 'Kaushan Script', cursive;
+      color: #ebfb50;
+      text-shadow: 2px 2px #000;
+    }
+  }
+  #arrow-bottom{
+    //@include centerBlock;
+    position: relative;
+    top: 240px;
+    width: 100px;
+    height: 170px;
+    text-align: center;
+    font-size: 65px;
+    margin: 0 auto;
+    i{
+      animation: arrowBottom 4s infinite;
+      color: $link;
+      text-shadow: 2px 2px #000;
+    }
+    a{
+      display: block;
+      position: absolute;
+      z-index: 99;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.slide{
+  height: 100vh;
+}
+#about{
+
+  #about-left-side{
+    img{
+      position: absolute;
+      top: 0px;
+      opacity: 0;
+    }
+    div{
+      position: absolute;
+      top: 450px;
+      opacity: 0;
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+  #about-right-side{
+    &>p{
+      padding: 12px 8px 0 0;
+      opacity: 0;
+      text-align: justify;
+    }
+    #skills{
+      div{
+        margin-top: 1px;
+        opacity: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+#portfolio{
+  padding: 0;
+  #portfolio-top{
+    box-shadow: 0 -20px 30px #939393;
+    height: 30%;
+    background-image: url('../img/tablet_smart_phone_hi_tech_icons_hand_96123_4180x2958.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  #portfolio-bottom{
+    height: 70%;
+    background-color: #24424c;
+
+    .main-container{
+      margin-top: 2px;
+      opacity: 0;
+    }
+    .portfolio-container{
+      margin: 0 auto;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .portfolio-cover{
+      width: 100%;
+      height: 85%;
+      background-size: cover;
+    }
+    .all-elements{
+      margin-top: 0;
+      height: 120%;
+      width: 100%;
+    }
+    .portfolio-links{
+      font-size: 30px;
+      width: 100%;
+      height: 25%;
+      background-color: #FFF;
+      box-shadow: inset 0 12px 20px #939393;
+      padding-top: 10px;
+      text-align: center;
+      i{
+        margin-right: 28px;
+        font-weight: bold;
+      }
+    }
+    #cover-first{
+      background-image: url('../img/portfolio/1.jpg');
+    }
+    #cover-second{
+      background-image: url('../img/portfolio/2.png');
+    }
+  }
+}
+footer{
+  height: 300px;
+  background-color: #232323;
+  color: #c3c3c3;
+  padding: 12px;
+  .row{
+    padding-left: 25px;
+    margin-bottom: 5px;
+    font-size: 17px;
+    i{
+      margin-right: 18px;
+    }
+  }
+  a{
+    font-size: 38px;
+    margin-left: 8px;
+    color: #008fb3;
+    &:hover{
+      color: #00b6e3;
+    }
+  }
+}
+#footer{
+  height: 50px;
+  width: 100%;
+  background-color: #191919;
+  color: #808080;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 18px;
+}
