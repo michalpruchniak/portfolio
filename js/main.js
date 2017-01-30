@@ -1,8 +1,10 @@
 
 
   $(document).scroll(function(){
-    var wysokosc = $("#first-slide").height() -80;
-    if($(this).scrollTop() > wysokosc){
+    var navHeight = $('nav').height()+3;
+    var slideHeight = ($(".slide").height() );
+
+    if($(this).scrollTop() > slideHeight - navHeight){
       $("#about-left-side img").animate({
               'top': 35,
               'opacity': 1
@@ -20,11 +22,15 @@
       }, 800);
         $('nav>a').eq(1).addClass('.activeLink');
     }
-  });
+    if($(this).scrollTop() > slideHeight*2 - navHeight){
+      $(".main-container").animate({
+        'marginTop': 50,
+        'opacity': 1
+      }, 500);
+    }
 
+    //menu
 
-
-  $(document).scroll(function(){
     if($(this).scrollTop() > 15){
       $( "nav" ).css('backgroundColor', '#000');
       $( "nav" ).css('opacity', '0.8');
@@ -34,10 +40,9 @@
       $( "nav" ).css('opacity', '1');
       $( "nav" ).css('color', '#f2d4ff');
     }
-
   });
 
-
+    //hove effect
     if($('body').width() > 800){
         $(".portfolio-container").on({
           mouseenter: function(){
@@ -67,6 +72,8 @@
       });
 
     }
+
+//responsive menu
 function closeMenu(){
   $("#background").animate({
     opacity: "0"

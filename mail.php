@@ -52,11 +52,11 @@ if(isset($_POST['name'])){
 
   if($flag==true){
     $newMessage = "Imię: " .$name. ", numer telefonu: " .$pn. ", adres email: " .$mail. ", wiadomość: " .$message;
-    /*if(mail("mpruchniak@gmail.com", "kontakt w sprawie pracy", $newMessage)){
+    if(mail("mpruchniak@gmail.com", "kontakt w sprawie pracy", $newMessage)){
       echo '<script> messageSend(); </script>';
     } else {
       echo '<script> messageError(); </script>';
-    }*/
+    }
     echo '<script> messageSend(); </script>';
   } else {
     echo '<script> messageError(); </script>';

@@ -121,15 +121,6 @@
           $("nav li:eq(2)").click(function(){
             $(window).scrollTo(slideHeight * 3, 800);
           });
-
-          $(document).scroll(function(){
-            if($(this).scrollTop() > slideHeight*2 - navHeight-5){
-              $(".main-container").animate({
-                'marginTop': 50,
-                'opacity': 1
-              }, 500);
-            }
-          });
       </script>
       <script src="js/main.js"></script>
       <script src="js/formValidator.js"></script>

@@ -16,19 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
       testInput(document.getElementById('name'), '^[a-zA-Z0-9\s_-]{3,45}$');
     });
 
-
-
     document.getElementById('pn').addEventListener('keyup', function() {
       testInput(document.getElementById('pn'), '^[0-9-+]{9,16}$');
     });
 
-
-
     document.getElementById('mail').addEventListener('keyup', function() {
       testInput(document.getElementById('mail'), '^[0-9a-zA-Z_.-]+@+[0-9a-zA-Z.-]+.+[a-zA-Z]{2,3}$');
     });
-
-
 
     document.getElementById('mail').addEventListener('keyup', function() {
       testInput(document.getElementById('mail'), '^[0-9a-zA-Z_.-]+@+[0-9a-zA-Z.-]+.+[a-zA-Z]{2,3}$');
