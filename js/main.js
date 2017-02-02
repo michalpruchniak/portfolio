@@ -1,6 +1,6 @@
 
 var navHeight = $('nav').height();
-var slideHeight = $(".slide").height();
+var slideHeight = $("#about").height();
 var firstHeight = $("#first-slide").height();
 var oMnie = firstHeight - navHeight;
 var portfolio = firstHeight + slideHeight - navHeight;
@@ -64,6 +64,7 @@ $("#background li a:eq(0)").click(function(){
 $("#background li a:eq(1)").click(function(){
   closeMenu();
   setTimeout(function(){
+    alert(portfolio);
     $(window).scrollTo(portfolio, 800);
   }, delay);
 });
@@ -74,7 +75,7 @@ $("#background li a:eq(2)").click(function(){
   }, delay);
 });
 
-
+//show elements
   $(document).scroll(function(){
 
     if($(this).scrollTop() > firstHeight - navHeight-10){
