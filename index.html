@@ -106,22 +106,7 @@
         </footer>
         <div id="footer">Michał Pruchniak &copy 2017</div>
       </div>
-      <script>
-        var navHeight = $('nav').height();
-        var slideHeight = ($(".slide").height() );
-          $("nav li:eq(0)").click(function(){
-            $(window).scrollTo(slideHeight - navHeight, 800);
-          });
-          $("#arrow-bottom").click(function(){
-            $(window).scrollTo(slideHeight - navHeight, 800);
-          });
-          $("nav li:eq(1)").click(function(){
-            $(window).scrollTo(slideHeight * 2 - navHeight, 800);
-          });
-          $("nav li:eq(2)").click(function(){
-            $(window).scrollTo(slideHeight * 3, 800);
-          });
-      </script>
+
       <script src="js/main.js"></script>
       <script src="js/formValidator.js"></script>
       <?php

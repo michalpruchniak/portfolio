@@ -1,7 +1,16 @@
 @media (min-width: 1024px){
+  #first-slide{
+    height: 100vh;
+    #arrow-bottom{
+      top: 260px;
+    }
+  }
+  .slide:not(#first-slide){
+    height: 100vh;
+  }
   .portfolio-container{
-    width: 30vw;
-    height: 20vw;
+    width: 25vw;
+    height: 15vw;
   }
   .header{
     &:before{
@@ -17,6 +26,7 @@
     }
   }
   #me{
+    top: 180px;
     width: 450px;
     span{
       font-size: 45px;
@@ -28,9 +38,19 @@
 
 }
 @media (max-width: 1024px){
+
+  #first-slide{
+    min-height: 800px;
+    #arrow-bottom{
+      top: 110px;
+    }
+  }
+  .slide:not(#first-slide){
+    height: 135vh;
+  }
   .portfolio-container{
-    width: 75vw;
-    height: 45vw;
+    width: 250px;
+    height: 160px;
   }
   .header{
     font-size: 18px;
@@ -50,6 +70,7 @@
     }
   }
   #me{
+    top: 80px;
     width: 98%;
     span{
       font-size: 33px;
@@ -64,14 +85,14 @@
 @media (max-width: 1024px) and (orientation: landscape){
   .portfolio-container{
     width: 45vw;
-    height: 20vw;
+    height: 30vw;
   }
 
   #first-slide{
     height: 100vh;
   }
   .slide:not(#first-slide){
-    height: 130vh;
+    height: 800px;
   }
 
 }
