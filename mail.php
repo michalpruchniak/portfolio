@@ -47,12 +47,38 @@ if(isset($_POST['name'])){
   if(!isset($_POST['message'])){
     $flag=false;
   } else {
-    $message = htmlentities(nl2br($_POST['message']));
+    $message = nl2br(htmlentities($_POST['message']));
   }
 
   if($flag==true){
-    $newMessage = "Imię: " .$name. ", numer telefonu: " .$pn. ", adres email: " .$mail. ", wiadomość: " .$message;
-    if(mail("mpruchniak@gmail.com", "kontakt w sprawie pracy", $newMessage)){
+    $newMessage = '<table>
+                    <tr>
+                      <td><b>Imię:</b></td>
+                      <td>' .$name. '</td>
+                    </tr>
+                    <tr>
+                      <td><b>Numer telefonu: </b></td>
+                      <td>' .$pn. '</td>
+                    </tr>
+                    <tr>
+                      <td><b>Mail: </b></td>
+                      <td>' .$mail. '</td>
+                    </tr>
+                    <tr>
+                    <td colspan="2"><b>Treść wiadomości:</b></td>
+                    </tr>
+                    <tr>
+                    <td colspan="2">' .$message. '</td>
+                    </tr>
+                  </table>';
+
+    $header = 'Content-type: text/html; charset=iso-8859-1';
+
+    if(mail("mpruchniak@gmail.com", "kontakt w sprawie pracy", $newMessage, $header)){
+      unset($_POST['name']);
+      unset($_POST['pn']);
+      unset($_POST['mail']);
+      unset($_POST['message']);
       echo '<script> messageSend(); </script>';
     } else {
       echo '<script> messageError(); </script>';
