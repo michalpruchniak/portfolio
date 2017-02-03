@@ -1,6 +1,6 @@
 <script>
   function messageError(){
-    $('body').append('<div class="message_error"><h3>Wiadomość nie została wysłana</h3><p>Upewnij się, że wypełniłeś prawidłowo wszystkie pola. Jeżeli błąd będzie się powstarzał, polecał wysłać wiadomość na adres: <b>mpruchniak@gmail.com</b></p></div>');
+    $('body').append('<div class="message_error"><h3>Wiadomość nie została wysłana</h3><p>Upewnij się, że wypełniłeś prawidłowo wszystkie pola. Jeżeli błąd będzie się powstarzał, polecam wysłać wiadomość na adres: <b>mpruchniak@gmail.com</b></p></div>');
     setTimeout(function(){
       $(".message_error").fadeIn();
     }, 500);
@@ -75,10 +75,6 @@ if(isset($_POST['name'])){
     $header = 'Content-type: text/html; charset=iso-8859-1';
 
     if(mail("mpruchniak@gmail.com", "kontakt w sprawie pracy", $newMessage, $header)){
-      unset($_POST['name']);
-      unset($_POST['pn']);
-      unset($_POST['mail']);
-      unset($_POST['message']);
       echo '<script> messageSend(); </script>';
     } else {
       echo '<script> messageError(); </script>';
@@ -87,6 +83,10 @@ if(isset($_POST['name'])){
   } else {
     echo '<script> messageError(); </script>';
   }
+  unset($_POST['name']);
+  unset($_POST['pn']);
+  unset($_POST['mail']);
+  unset($_POST['message']);
 
 }
 
