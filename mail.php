@@ -24,6 +24,13 @@
   }
 </script>
 <?php
+function unsetVar(){
+  unset($_POST['name']);
+  unset($_POST['pn']);
+  unset($_POST['mail']);
+  unset($_POST['message']);
+}
+
 if(isset($_POST['name'])){
   $flag=true;
   if(!preg_match('@^[a-zA-Z0-9\s_-]{3,45}$@', $_POST['name'])){
@@ -78,15 +85,14 @@ if(isset($_POST['name'])){
       echo '<script> messageSend(); </script>';
     } else {
       echo '<script> messageError(); </script>';
+      unsetVar();
     }
     echo '<script> messageSend(); </script>';
   } else {
     echo '<script> messageError(); </script>';
+    unsetVar();
   }
-  unset($_POST['name']);
-  unset($_POST['pn']);
-  unset($_POST['mail']);
-  unset($_POST['message']);
+
 
 }
 

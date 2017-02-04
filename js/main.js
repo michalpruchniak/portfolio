@@ -1,14 +1,14 @@
-
 var navHeight = $('nav').height();
 var slideHeight = $("#about").height();
 var firstHeight = $("#first-slide").height();
 var oMnie = firstHeight - navHeight;
 var portfolio = firstHeight + slideHeight - navHeight;
 var kontakt = firstHeight + slideHeight*2 - navHeight;
-$("nav li a:eq(0)").click(function(){
+
+$("#arrow-bottom").click(function(){
   $(window).scrollTo(oMnie, 800);
 });
-$("#arrow-bottom").click(function(){
+$("nav li a:eq(0)").click(function(){
   $(window).scrollTo(oMnie, 800);
 });
 $("nav li a:eq(1)").click(function(){
@@ -50,6 +50,7 @@ $("#barMenu").click(function(){
     $("#background p").fadeIn(400);
   }, 680);
 });
+
 var delay = 850;
 $("#closeMenu").click(function(){
   closeMenu();
@@ -64,7 +65,6 @@ $("#background li a:eq(0)").click(function(){
 $("#background li a:eq(1)").click(function(){
   closeMenu();
   setTimeout(function(){
-    alert(portfolio);
     $(window).scrollTo(portfolio, 800);
   }, delay);
 });
@@ -78,7 +78,7 @@ $("#background li a:eq(2)").click(function(){
 //show elements
   $(document).scroll(function(){
 
-    if($(this).scrollTop() > firstHeight - navHeight-10){
+    if($(this).scrollTop() > oMnie-30){
       $("#about-left-side img").animate({
               'top': 35,
               'opacity': 1
@@ -96,13 +96,13 @@ $("#background li a:eq(2)").click(function(){
       }, 800);
     }
 
-    if($(this).scrollTop() > firstHeight + slideHeight - navHeight-10){
+    if($(this).scrollTop() > portfolio-30){
 
       $(".main-container").animate({
         'marginTop': 20,
         'opacity': 1
       }, 500);
-    }slideHeight
+    }
 
     //menu
 

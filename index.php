@@ -7,9 +7,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Jestem początkującym front end developerem. Zapraszam do współpracy">
+        <meta name="description" content="Jestem początkującym front-end developerem. Zapraszam do współpracy">
         <meta name="keywords" content="front end, developer, webmaster, web designer. html, js, css, php, git, gulp">
-        <title>Michał Pruchniak | Front end developer | portfolio</title>
+        <title>Michał Pruchniak | Front-end developer | portfolio</title>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -39,21 +39,23 @@
         <div class="slide container-fluid" id="first-slide">
             <nav><a href="javascript:void(0)" id="barMenu"><i class="fa fa-bars" aria-hidden="true"></i></a></span><ul><li><a href="javascript:void(0)" id="l-about">O mnie</a></li><li><a href="javascript:void(0)">Portfolio</a></li><li><a href="javascript:void(0)">Kontakt</a></li></ul></nav>
             <div id="me"><span>Michal Pruchniak</span>
-            <p>Front end developer</p></div>
+            <p>Front-end developer</p></div>
             <div id="arrow-bottom"><a href="javascript:void(0)"></a><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></div>
         </div>
         <div class="slide container-fluid" id="about">
           <div class="col-lg-4 hidden-md hidden-sm hidden-xs" id="about-left-side">
             <img src="img/portrait.jpg" class="img-circle">
             <div>
-              <p><span>Michał Pruchniak</span></p>
-              <p><span>Zainteresowania z dziedziny IT:</span> Dawniej PHP z frameworkiem Code Igniter, obecnie technologie front endowe</p>
+              <h2>Michał Pruchniak</h2>
+              <p><span>Zainteresowania z dziedziny IT:</span> Dawniej PHP z frameworkiem Code Igniter, obecnie technologie frontendowe</p>
               <p><span>Zainteresowania:</span> Street Workout, Armwrestling, piwo kraftowe, polityka i historia</p>
             </div>
           </div>
           <div class="col-lg-8 col-sm-8 col-xs-12" id="about-right-side">
             <h2 class="header">O mnie</h2>
-            <p>Witajcie! Nazywam się Michał Pruchniak i jestem początkującym front end developerem. Co prawda swoją przygodę z tworzeniem stron internetowych zaczynałem od PHP, jednak obecnie staram się rozwijać w technologiach font endowych. Chętnie uczę się nowych technologii, nie z przymusu, ale dlatego, zew jest to dla mnie po prostu interesujące. Poza programowaniem lubię sport (kiedyś uprawiałem armwrestling i street workout), chociaż obecnie nie mam na to za dużo czasu oraz, o ironio, piwo kraftowe.</p>
+            <p>Witajcie. Nazywam się Michał Pruchniak i jestem początkującym front-end developerem. Swoją przygodę z tworzeniem stron internetowych zaczynałem od PHP (korzystałem z frameworka Code Igniter), jednak teraz staram się rozwijać przede wszystkim w technologiach frontendowych. W wolnej chwili lubię dobie poćwiczyć lub zanurzyć się w interesującej lekturze.
+            <br>Czekam na wszystkie propozycje współpracy.
+            </p>
             <h2 class="header">Umiejętności</h2>
             <div class="row" id="skills">
               <div class="col-lg-3 col-sm-3 col-xs-3"><img src="img/tech/html.png" alet="HTML"></div>
@@ -63,7 +65,7 @@
               <div class="col-lg-3 col-sm-3 col-xs-3"><img src="img/tech/bootstrap.png" alet="Bootstrap"></div>
               <div class="col-lg-3 col-sm-3 col-xs-3"><img src="img/tech/sass.png" alet="SASS"></div>
               <div class="col-lg-3 col-sm-3 col-xs-3"><img src="img/tech/gulp.png" alet="Gulp"></div>
-              <div class="col-lg-3 col-sm-3 col-xs-3"><img src="img/tech/linux.png" alet="Linux"></div>
+              <div class="col-lg-3 col-sm-3 col-xs-3"><img src="img/tech/git.png" alet="Linux"></div>
             </div>
           </div>
         </div>

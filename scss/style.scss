@@ -1,13 +1,12 @@
 @import 'media';
 @import 'form';
 @import 'message';
-@import url('https://fonts.googleapis.com/css?family=Domine');
-@import url('https://fonts.googleapis.com/css?family=Carter+One');
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Carter+One|Kaushan+Script|Roboto');
 
 @import 'animate';
 $link: #8fddf1;
 body{
+  font-family: 'Roboto', sans-serif;
   overflow-y: auto;
 }
 #background{
@@ -91,7 +90,7 @@ nav{
       text-decoration: none;
     }
     &:focus{
-      color: #D4E157;
+      color: $link;
       text-decoration: none;
     }
 }
@@ -120,19 +119,18 @@ nav{
     font-weight: bold;
     span{
         text-align: center;
-        font-family: 'Carter One', cursive;
+        font-family: 'Carter One';
         color: $link;
         text-shadow: 2px 2px #000;
     }
     p{
       text-align: right;
-      font-family: 'Kaushan Script', cursive;
+      font-family: 'Kaushan Script';
       color: #ebfb50;
       text-shadow: 2px 2px #000;
     }
   }
   #arrow-bottom{
-    //@include centerBlock;
     position: relative;
     width: 100px;
     height: 170px;
@@ -156,7 +154,6 @@ nav{
 
 
 #about{
-
   #about-left-side{
     img{
       position: absolute;
@@ -259,6 +256,9 @@ footer{
     color: #008fb3;
     &:hover{
       color: #00b6e3;
+    }
+    &:focus{
+      color: #008fb3;
     }
   }
 }
